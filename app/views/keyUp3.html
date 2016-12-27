@@ -1,0 +1,11 @@
+<strong>7.angular2用户输入---按键事件过滤 ( 通过 keyup.enter) </strong>
+<p>我们可以只在用户按下回车 (enter) 键的时候才获取输入框的值。
+
+    (keyup) 事件处理语句会听到每一次按键，我们可以过滤按键，比如每一个 $event.keyCode，只有在按下回车键才更新 values 属性。
+
+    Angular 可以为我们过滤键盘事件，通过绑定到 Angular 的 keyup.enter 伪事件监听回车键的事件</p>
+
+<div>
+    <input type="text" #box (keyup.enter)="values=box.value"/>
+    {{values}}
+</div>

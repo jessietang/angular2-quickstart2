@@ -1,0 +1,20 @@
+<strong>8.angular2用户输入---blur( 失去焦点 ) 事件</strong>
+<p>接下来我们可以使用blur( 失去焦点 ) 事件，它可以再元素失去焦点后更新 values 属性。
+
+    以下实例同时监听输入回车键与输入框失去焦点的事件</p>
+
+<div>
+    <input type="text" #box (keyup.enter)="values=box.value" (blur)="values=box.value"/>
+    {{values}}
+</div>
+
+<div>
+    <!--(blur)="addCity(newCity.value)" 这个不要-->
+    <input type="text" #newCity (keyup.enter)="addCity(newCity.value)" placeholder="{{placeholders}}"/>
+    <button (click)="addCity(newCity.value)">Add City</button>
+    <ul>
+        <li *ngFor="let city of cities">
+            {{city}}
+        </li>
+    </ul>
+</div>

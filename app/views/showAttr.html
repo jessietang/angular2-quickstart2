@@ -1,0 +1,24 @@
+<strong>1.通过插值表达式显示组件的属性</strong>
+<div><h1>angular2 typescript environment configuration</h1>
+    <h2>1111111111</h2>
+    <h3>222222222222</h3>
+    <h4>33333333</h4>
+    <p>{{title}}</p>
+    <p>my favourite site is: {{mySite}}</p>
+</div>
+
+<strong>2.使用 ngFor 显示数组属性。
+    我们在模板使用 Angular 的 ngFor 指令来显示 sites 列表中的每一个条目，不要忘记 *ngFor 中的前导星号 (*)
+    ngFor 可以循环数组， 事实上 ngFor 可以迭代任何可迭代的对象</strong>
+
+<p>{{myTitle}}</p>
+<ul>
+    <li *ngFor="let site of sites">
+        {{site.id}}----{{site.name}}
+    </li>
+</ul>
+
+<strong>3.通过ngIf进行条件显示</strong>
+<p *ngIf="sites.length > 3">你喜欢的网站超过三个。</p>
+
+
