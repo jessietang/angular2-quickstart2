@@ -5,5 +5,7 @@
     我们可以使用模板引用变量来修改以上 keyup 的实例</p>
 <div>
     <input type="text" #box (keyup)="onKey(box.value)"/>
+    {{box.value}}
     <p>{{values}}</p>
 </div>
+<div>{{box.value}}</div>

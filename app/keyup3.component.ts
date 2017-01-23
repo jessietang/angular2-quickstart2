@@ -10,5 +10,10 @@ import {Component} from '@angular/core';
 
 export class KeyUpComponent_v3{
     values = '';
+
+    values2 = '';
+    onEnter(value: string){
+        this.values2 += value;
+    }
 }
 

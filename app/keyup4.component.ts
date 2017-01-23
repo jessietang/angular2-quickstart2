@@ -13,6 +13,9 @@ export class KeyUpComponent_v4{
     cities = ["成都","上海","广州","北京"];
     placeholders = "please input a city you want to add";
     addCity(newCity: string){
-        this.cities.push(newCity);
+        if(newCity){
+            this.cities.push(newCity);
+        }
+
     }
 }

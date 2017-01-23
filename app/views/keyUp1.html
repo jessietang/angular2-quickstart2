@@ -2,4 +2,8 @@
 <div>
     <input type="text" (keyup)="onKey($event)"/>
     <p>{{values}}</p>
+
+    <p>用event.key替代event.target.value，积累各个按键本身</p>
+    <input type="text" (keyup)="onKey2($event)"/>
+    <p>{{keyValues}}</p>
 </div>

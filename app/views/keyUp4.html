@@ -9,8 +9,11 @@
 </div>
 
 <div>
-    <!--(blur)="addCity(newCity.value)" 这个不要-->
-    <input type="text" #newCity (keyup.enter)="addCity(newCity.value)" placeholder="{{placeholders}}"/>
+    <!--(blur)事件被绑定到两个 JavaScript 语句。
+    第一句调用  addCity 。第二句  newCity.value=''  在添加新city到列表中后清除输入框。-->
+    <input type="text" #newCity (keyup.enter)="addCity(newCity.value)"
+           (blur)="addCity(newCity.value);newCity.value=''"
+           placeholder="{{placeholders}}"/>
     <button (click)="addCity(newCity.value)">Add City</button>
     <ul>
         <li *ngFor="let city of cities">
